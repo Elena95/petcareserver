@@ -1,0 +1,9 @@
+POST http://localhost:8080/petlover/register
+Content-Type: application/json
+
+{
+   "email": "elena@gmail.com",
+   "name": "elena",
+   "password": "qwert"
+}
+###

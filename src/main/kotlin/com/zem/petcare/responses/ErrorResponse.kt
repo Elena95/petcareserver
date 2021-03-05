@@ -1,10 +1,10 @@
 package com.zem.petcare.responses
 
-data class ErrorResponse (
+data class ErrorResponse(
 
     val errors: List<String>? = emptyList()
-        ): Response(){
-            init{
-                status = 2
-            }
-        }
+) : Response() {
+    init {
+        status = 2
+    }
+}

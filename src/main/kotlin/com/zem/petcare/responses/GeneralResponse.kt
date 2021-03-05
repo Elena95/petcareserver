@@ -1,5 +1,5 @@
 package com.zem.petcare.responses
 
-data class GeneralResponse (
+data class GeneralResponse(
     val result: Any
-        ): Response()
+) : Response()
