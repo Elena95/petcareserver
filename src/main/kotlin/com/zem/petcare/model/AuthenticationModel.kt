@@ -1,7 +1,6 @@
 package com.zem.petcare.model
 
-data class PetLoverModel(
+data class AuthenticationModel(
     val email: String,
-    val name: String,
     val password: String
 )

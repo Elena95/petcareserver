@@ -2,7 +2,7 @@ package com.zem.petcare
 
 import com.zem.petcare.dao.RepositoryPetLover
 import com.zem.petcare.entities.PetLover
-import com.zem.petcare.model.PetLoverModel
+import com.zem.petcare.model.AuthenticationModel
 import com.zem.petcare.responses.ErrorResponse
 import com.zem.petcare.responses.GeneralResponse
 import com.zem.petcare.responses.Response
@@ -34,8 +34,8 @@ class PetLoverController {
     }
 
     @PostMapping("/authentication")
-    fun authentication(@RequestBody authenticationRequest: PetLoverModel): ResponseEntity<Response>{
-        PetLoverModel::class.memberProperties.forEach{
+    fun authentication(@RequestBody authenticationRequest: AuthenticationModel): ResponseEntity<Response>{
+        AuthenticationModel::class.memberProperties.forEach{
             if (it.get(authenticationRequest)==null){
                 return ResponseEntity.badRequest().body(ErrorResponse().apply { msn = "${it.name}no proporcionado"})
             }
