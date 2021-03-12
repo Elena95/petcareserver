@@ -15,3 +15,15 @@ Content-Type: application/json
   "password": "qwert"
 }
 ###
+
+POST http://localhost:8080/petservice/register
+Content-Type: application/json
+
+{
+  "name": "PetCare",
+  "descrip":"Aplicacion para adquirir un petService",
+  "schedule": "24/7",
+  "address": "All over the world",
+  "location": "In you heart"
+}
+###
