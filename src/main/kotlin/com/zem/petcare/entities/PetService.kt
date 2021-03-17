@@ -2,7 +2,7 @@ package com.zem.petcare.entities
 
 import javax.persistence.*
 
-@Entity
+@Entity(name = "petservices")
 
 data class PetService(
     @Id

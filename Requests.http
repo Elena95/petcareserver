@@ -16,13 +16,13 @@ Content-Type: application/json
 }
 ###
 
-POST http://localhost:8080/petservice/register
+POST http://localhost:8080/petservice/registerService
 Content-Type: application/json
 
 {
   "name": "PetCare",
   "descrip":"Aplicacion para adquirir un petService",
-  "schedule": "24/7",
+  "schedule": "24-7",
   "address": "All over the world",
   "location": "In you heart"
 }

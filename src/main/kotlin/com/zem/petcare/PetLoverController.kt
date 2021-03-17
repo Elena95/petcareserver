@@ -2,6 +2,7 @@ package com.zem.petcare
 
 import com.zem.petcare.dao.RepositoryPetLover
 import com.zem.petcare.entities.PetLover
+import com.zem.petcare.entities.PetService
 import com.zem.petcare.model.AuthenticationModel
 import com.zem.petcare.responses.ErrorResponse
 import com.zem.petcare.responses.GeneralResponse
@@ -48,5 +49,18 @@ class PetLoverController {
         }else{
             ResponseEntity.badRequest().body(ErrorResponse().apply{msn = "Usuario o contraseña incorrectos"})
         }
+    }
+
+    @PostMapping("/registerService")
+    fun register(@RequestBody petService: PetService): ResponseEntity<Response> {
+        /* val nameService = repo.findByName(petService.name)
+        if (nameService.name != null){
+            return ResponseEntity.badRequest().body(ErrorResponse().apply {msn = "Ya existe"})
+        }
+        repo.save(petService)
+        return ResponseEntity.ok(GeneralResponse("Registrado"))
+    }*/
+        return ResponseEntity.ok(GeneralResponse("Registrado"))
+
     }
 }
