@@ -2,8 +2,8 @@ POST http://localhost:8080/petlover/register
 Content-Type: application/json
 
 {
-   "email": "elena@gmail.com",
-   "name": "elena",
+   "email": "nanami@gmail.com",
+   "name": "maria elena",
    "password": "qwert"
 }
 ###
@@ -11,7 +11,7 @@ POST http://localhost:8080/petlover/authentication
 Content-Type: application/json
 
 {
-  "email": "elena@gmail.com",
+  "email": "elenavf@gmail.com",
   "password": "qwert"
 }
 ###
