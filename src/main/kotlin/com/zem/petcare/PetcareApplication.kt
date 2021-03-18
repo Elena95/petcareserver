@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.ResponseBody
 
 @SpringBootApplication
-@Controller
+//@Controller
 class PetcareApplication {
 
-    @RequestMapping("/")
+    /*@RequestMapping("/")
     @ResponseBody
     fun home(): String {
         return "Hola mundo"
-    }
+    }*/
 
 }
 
