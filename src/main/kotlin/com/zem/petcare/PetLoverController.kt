@@ -30,7 +30,7 @@ class PetLoverController {
             return ResponseEntity.badRequest().body(ErrorResponse().apply { msn = "Ya existe" })
         }
 
-        //repo.save(petLover)
+        repo.save(petLover)
         return ResponseEntity.ok(GeneralResponse("Registrado correctamente"))
     }
 
@@ -44,10 +44,10 @@ class PetLoverController {
         val petLover = repo.findByEmail(authenticationRequest.email)
         val password = authenticationRequest.password
 
-        return if(password == petLover?.password){
+        return if(password != petLover?.password){
             ResponseEntity.ok(GeneralResponse("Datos correctos").apply { msn = "Peticion correcta"})
         }else{
-            ResponseEntity.badRequest().body(ErrorResponse().apply{msn = "Usuario o contraseña incorrectos"})
+            ResponseEntity.badRequest().body(ErrorResponse().apply{msn = "Usuario o contraseña incorrectos"+petLover.password})
         }
     }
 
