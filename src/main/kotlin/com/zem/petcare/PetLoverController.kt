@@ -45,22 +45,10 @@ class PetLoverController {
         val password = authenticationRequest.password
 
         return if(password != petLover?.password){
-            ResponseEntity.ok(GeneralResponse("Datos correctos").apply { msn = "Peticion correcta"})
+            ResponseEntity.badRequest().body(ErrorResponse().apply{msn = "Usuario o contraseña incorrectos"})
         }else{
-            ResponseEntity.badRequest().body(ErrorResponse().apply{msn = "Usuario o contraseña incorrectos"+petLover.password})
-        }
-    }
+            ResponseEntity.ok(GeneralResponse("Datos correctos").apply { msn = "Peticion correcta"})
 
-    @PostMapping("/registerService")
-    fun register(@RequestBody petService: PetService): ResponseEntity<Response> {
-        /* val nameService = repo.findByName(petService.name)
-        if (nameService.name != null){
-            return ResponseEntity.badRequest().body(ErrorResponse().apply {msn = "Ya existe"})
         }
-        repo.save(petService)
-        return ResponseEntity.ok(GeneralResponse("Registrado"))
-    }*/
-        return ResponseEntity.ok(GeneralResponse("Registrado"))
-
     }
 }
